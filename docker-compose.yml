@@ -17,9 +17,9 @@ services:
       - "db:/var/lib/postgresql/data"
 
     environment:
-      - "POSTGRES_USER=ayon"
-      - "POSTGRES_PASSWORD=ayon"
-      - "POSTGRES_DB=ayon"
+      - "POSTGRES_USER=${POSTGRES_USER:-ayon}"
+      - "POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-ayon}"
+      - "POSTGRES_DB=${POSTGRES_DB:-ayon}"
 
   redis:
     image: redis:alpine
